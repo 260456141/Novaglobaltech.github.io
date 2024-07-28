@@ -9,13 +9,17 @@
 <body>
     <header>
         <div class="container">
-            <h1>Novaglobal Tech</h1>
+            <div class="logo">
+                <img src="logo.png" alt="Novaglobal Tech Logo" width="150" height="50">
+            </div>
+            <h1></h1>
             <nav>
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <button onclick="location.href='invoice.html'">PDF Tools</button>
                 </ul>
             </nav>
         </div>
@@ -24,23 +28,22 @@
     <section id="home" class="hero">
         <div class="container">
             <h2>Your Trusted Tech Reseller</h2>
-            <p>Get the best deals on the latest tech products.</p>
+            <p class="hero-text">Get the best deals on the latest tech products.</p>
+
         </div>
     </section>
     
     <section id="products" class="products">
         <div class="container">
-            <h2>Our Products</h2>
+            <h2></h2>
             <div class="product-grid">
                 <div class="product-card">
-                    <img src="product1.jpg" alt="Product 1">
-                    <h3>Product 1</h3>
-                    <p>$299.99</p>
+                    <img src="product1.jpg" alt="Product 1" width="3000" height="200">
                 </div>
                 <div class="product-card">
-                    <img src="product2.jpg" alt="Product 2">
-                    <h3>Product 2</h3>
-                    <p>$399.99</p>
+                    <img src="product2.jpg" alt="Product 2" width="3000" height="200">
+ 
+
                 </div>
                 <!-- Add more product cards as needed -->
             </div>
@@ -59,7 +62,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
-            <form action="mailto:sales@novaglobaltech.com" method="post" enctype="text/plain">
+            <form id="contactForm" action="mailto:sales@novaglobaltech.com" method="post" enctype="text/plain">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
                 
@@ -79,5 +82,7 @@
             <p>&copy; 2024 Novaglobal Tech. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
