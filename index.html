@@ -1,8 +1,83 @@
-html>
-  <head>
-    <title>My Website</title>
-  </head>
-  <body>
-    <h1>Welcome To My Website!</h1>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novaglobal Tech</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Novaglobal Tech</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Your Trusted Tech Reseller</h2>
+            <p>Get the best deals on the latest tech products.</p>
+        </div>
+    </section>
+    
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="product1.jpg" alt="Product 1">
+                    <h3>Product 1</h3>
+                    <p>$299.99</p>
+                </div>
+                <div class="product-card">
+                    <img src="product2.jpg" alt="Product 2">
+                    <h3>Product 2</h3>
+                    <p>$399.99</p>
+                </div>
+                <!-- Add more product cards as needed -->
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p><strong>Who We Are:</strong> Novaglobal Tech is a leading tech reseller dedicated to providing the best technology products and services. Our mission is to connect consumers with high-quality tech solutions that enhance their everyday lives.</p>
+            <p><strong>What We Sell:</strong> We offer a wide range of tech products, including the latest smartphones, laptops, tablets, and accessories. Our curated selection ensures that you have access to the best and most innovative products on the market.</p>
+            <p><strong>Why Choose Us:</strong> At Novaglobal Tech, we prioritize customer satisfaction by offering competitive prices, excellent customer service, and reliable after-sales support. Our commitment to quality and integrity makes us a trusted partner for all your tech needs.</p>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="mailto:sales@novaglobaltech.com" method="post" enctype="text/plain">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Novaglobal Tech. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
 </html>
