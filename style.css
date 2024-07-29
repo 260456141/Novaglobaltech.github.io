@@ -48,15 +48,16 @@ nav ul li a {
 .hero {
     background: url('hero.jpg') no-repeat center center/cover;
     color: #000000;
-    text-align: left;
     padding: 8rem 0;
     margin-top: 10px;
+    text-align: left;
 }
 
 .hero h2 {
     margin: 0;
     font-size: 3rem;
     font-weight: bold;
+    text-align: left;
 }
 
 .hero-text {
