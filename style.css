@@ -48,25 +48,24 @@ nav ul li a {
 .hero {
     background: url('hero.jpg') no-repeat center center/cover;
     color: #000000;
-    text-align: center;
+    text-align: left;
     padding: 8rem 0;
-    margin-top: 60px;
+    margin-top: 10px;
 }
 
 .hero h2 {
     margin: 0;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: bold;
 }
 
 .hero-text {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
+    font-size: 1.2rem;
+    
 }
 
 .products {
-    padding: 2rem 0;
+    padding: 5rem 0;
 }
 
 .products .container {
@@ -86,8 +85,9 @@ nav ul li a {
     background: #fff;
     border: 1px solid #ddd;
     padding: 1rem;
-    width: calc(33.333% - 2rem);
+    width: calc(100% - 2rem);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
     text-align: center;
 }
 
@@ -98,6 +98,7 @@ nav ul li a {
 
 .product-card h3 {
     margin: 0.5rem 0;
+    text-align: center;
 }
 
 .about, .contact {
