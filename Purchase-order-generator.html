@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en-US">
+<head>
+    <title>Purchase Order</title>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/base.css">
+      <link rel="stylesheet" href="css/print.css" media="print">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='js/example.js'></script>
+</head>
+<body class="visible-print-block">
+    <div id="page-wrap">
+        <div id="logo">
+
+              <div id="logoctr">
+                <a href="javascript:;" id="change-logo" title="Change logo">Change Logo</a>
+                <a href="javascript:;" id="save-logo" title="Save changes">Save</a>
+                |
+                <a href="javascript:;" id="delete-logo" title="Delete logo">Delete Logo</a>
+                <a href="javascript:;" id="cancel-logo" title="Cancel changes">Cancel</a>
+              </div>
+
+              <div id="logohelp">
+                <input id="imageloc" type="text" size="50" value="" /><br />
+                (max width: 540px, max height: 100px)
+              </div>
+              <img id="image" src="images/logo.png" alt="logo" />
+        </div>
+        <div style="clear:both"></div>
+        <div id="header" class="container-fluid text-center">
+            <!--<h3>Novaglobal Tech LLC</h3>
+            <h3>Emaar Square</h3>-->
+        </div>
+        <div id="details" class="row">
+            <div class="col col-xs-6">
+                <ul>
+                    <li class="col-xs-12">
+                        <p class="label pull-left">Pay To: </p>
+                    	<textarea id="partner-name">Company Name</textarea>
+                    </li>
+
+                    <li class="col-xs-12">
+                         <p class="label pull-left">Address: </p>
+                         <textarea id="partner-address"> XXX, XXX</textarea>
+                    </li>
+
+                    <li class="col-xs-12">
+                         <p class="label pull-left">Site ID: </p>
+                         <textarea id="partner-tin-no">S-0001</textarea>
+                    </li>
+
+                    <li class="col-xs-12">
+                         <p class="label pull-left">Contact Person: </p>
+                         <textarea id="partner-contact">Shailesh / Akash</textarea>
+                    </li>
+
+                    <li class="col-xs-12">
+                         <p class="label pull-left">Phone: </p>
+                         <textarea id="partner-phone" cols="13" rows="2" style="width: auto;">+971526556946 +971556220735</textarea>
+                    </li>
+                </ul>
+               
+            </div>
+            <div class="col col-xs-6">
+                <div class="col col-xs-12">
+                    <ul>
+                        <li class="col-xs-12">
+                            <p class="label pull-left">PO No.: </p>
+                            <textarea id="partner-name">PO1000</textarea>
+                        </li>
+
+                        <li class="col-xs-12">
+                            <p class="label pull-left">PO Date: </p>
+                            <textarea class="date" id="fr-date">August 5, 2017</textarea>
+                        </li>
+
+                        <li class="col-xs-12">
+                            <p class="label pull-left">Delivery Date: </p>
+                            <textarea class="date" id="delivery-date">August 5, 2017</textarea>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col col-xs-12" style="border-top: 1px solid #cdcdcd;">
+                    <ul>
+                        <li class="col-xs-12">
+                            <p class="label pull-left">Shipped To: </p>
+                            <textarea id="shipping-address" rows="3">Noon.Com, WT-O5, Dubai South, Dubai World Central, Dubai, United Arab Emirates</textarea>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+        <div id="note">
+            <h3>Payment Terms:</h3>
+            <div contenteditable="true">Net 30
+            </div>
+        </div>
+        <table id="items">
+		
+		  <tr>
+		      <th>No.</th>
+		      <th>SKU Code</th>
+              <th>SKU Description</th>
+              <th>Order No.</th>
+              <th>Seller SKU Code</th>
+              <th>Brand</th>
+              <th>Color</th>
+              <th>Size</th>
+              <th>Unit Price</th>
+              <th>Qty</th>
+              <th>Total</th>
+		  </tr>
+		  
+		  <tr class="item-row">
+              <td><div class="delete-wpr"><textarea class="no"></textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+              <td><textarea class="sku-code">N11076164A</textarea></td>
+              <td class="description"><textarea>Swar D1 EDP</textarea></td>
+              <td><textarea class="order-no"></textarea></td>
+              <td><textarea class="seller-sku-code">6297000536057</textarea></td>
+              <td><textarea class="brand"></textarea></td>
+              <td><textarea class="color"></textarea></td>
+              <td><textarea class="size"></textarea></td>
+		      <td><textarea class="cost">$650.00</textarea></td>
+		      <td><textarea class="qty">5</textarea></td>
+		      <td><span class="price">$650.00</span></td>
+          </tr>
+              
+          <tr class="item-row">
+              <td><div class="delete-wpr"><textarea class="no"></textarea><a class="delete" href="javascript:;" title="Remove row">X</a></div></td>
+              <td><textarea class="sku-code">N11076164A</textarea></td>
+              <td class="description"><textarea>Swar D1 EDP</textarea></td>
+              <td><textarea class="order-no"></textarea></td>
+              <td><textarea class="seller-sku-code">6297000536057</textarea></td>
+              <td><textarea class="brand"></textarea></td>
+              <td><textarea class="color"></textarea></td>
+              <td><textarea class="size"></textarea></td>
+		      <td><textarea class="cost">$650.00</textarea></td>
+		      <td><textarea class="qty">5</textarea></td>
+		      <td><span class="price">$650.00</span></td>
+		  </tr>
+		  
+		  <tr id="hiderow">
+		    <td colspan="11"><a id="addrow" href="javascript:;" title="Add a row">Add a row</a></td>
+		  </tr>
+		  
+		  <tr>
+		      <td colspan="9" class="total-line">Subtotal(units)</td><td colspan="1" class="blank"> </td>
+		      <td class="total-value"><div id="subtotal-unit">10</div></td>
+          </tr>
+              
+          <tr>
+		      
+		      <td colspan="9" class="total-line">Subtotal(cost)</td><td colspan="1" class="blank"> </td>
+		      <td class="total-value"><div id="subtotal">$875.00</div></td>
+		  </tr>
+		
+        </table>
+        <br/>
+        <br/>
+        <br/>
+        <p class="text-center">sales@novaglobaltech.com</p>
+        <hr/>
+        <div id="terms">
+          <h3>Terms &amp; Conditions</h3>
+            <ol>
+                <li contenteditable="true"> Please send a copy of Delivery Note along with stock.</li>
+                <li contenteditable="true"> Please Mention the Delivery note no. on the transfer note.</li>
+                <li contenteditable="true"> Freight Charges are not included.</li>
+            </ol>
+		  
+		</div>
+    </div>
+
+</body>
