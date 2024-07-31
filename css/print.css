@@ -3,7 +3,7 @@
 *{
     display: inherit;
 }
-#logo {width: 100%}
+#logo {text-align: Left; width: 100%}
 #logo img{
     margin-left: 340px; max-width: 540px; max-height: 100px;
 }
