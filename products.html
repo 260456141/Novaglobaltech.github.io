@@ -125,7 +125,7 @@ footer a{color:#c4d2e8}
   <a href="#polos">Polo Shirts</a>
   <a href="#faq">FAQ</a>
  </nav>
- <a class="cta" href="mailto:sales@novaglobaltech.com">Get a Quote</a>
+ <a class="cta rq" href="#" data-code="General Inquiry">Get a Quote</a>
 </div></header>
 
 <section class="hero"><div class="wrap">
@@ -133,7 +133,7 @@ footer a{color:#c4d2e8}
  <h1>Premium Team Apparel, Factory-Direct.</h1>
  <p class="sub">High-performance jackets, down coats and refined polo shirts for companies that dress their people well — in stock today, customizable with your logo, and priced without the middlemen.</p>
  <div class="btns">
-  <a class="btn primary" href="mailto:sales@novaglobaltech.com?subject=Apparel%20Catalog%20Inquiry">Talk to a Specialist</a>
+  <a class="btn primary rq" href="#" data-code="General Inquiry">Talk to a Specialist</a>
   <a class="btn ghost" href="#outerwear">Browse the Collection ↓</a>
  </div>
  <div class="chips">
@@ -787,13 +787,13 @@ footer a{color:#c4d2e8}
 <section class="fcta"><div class="wrap">
  <h2>Outfit Your Team the Smart Way</h2>
  <p>Tell us your headcount, your climate and your logo — we'll come back with a curated recommendation, a size mapping plan and factory-direct pricing within one business day.</p>
- <a class="btn primary" href="mailto:sales@novaglobaltech.com?subject=Team%20Apparel%20Program%20Inquiry">Email sales@novaglobaltech.com</a>
+ <a class="btn primary rq" href="#" data-code="Team Apparel Program">Send Us a Message</a>
 </div></section>
 
 <footer><div class="wrap">
  <span>© 2026 Novaglobal Tech LLC. All rights reserved.</span>
  <span>HK: Flat 9, 10/F, Goldfield Industrial Centre, 1 Sui Wo Road, Fo Tan, Sha Tin, N.T., Hong Kong</span>
- <a href="mailto:sales@novaglobaltech.com">sales@novaglobaltech.com</a>
+ <a class="rq" href="#" data-code="General Inquiry">sales@novaglobaltech.com</a>
 </div></footer>
 
 <div class="qm-bg" id="qmBg" role="dialog" aria-modal="true">
@@ -806,7 +806,7 @@ footer a{color:#c4d2e8}
    <input type="hidden" name="_template" value="table">
    <input type="hidden" name="_captcha" value="false">
    <input type="text" name="_honey" style="display:none">
-   <label>Product Style <span class="req">*</span></label>
+   <label>Product / Subject <span class="req">*</span></label>
    <input type="text" name="product" id="qmProduct" required>
    <div class="row">
     <div><label>Your Name <span class="req">*</span></label><input type="text" name="name" required placeholder="John Smith"></div>
@@ -829,8 +829,9 @@ footer a{color:#c4d2e8}
  var bg=document.getElementById('qmBg'),x=document.getElementById('qmX'),form=document.getElementById('qmForm');
  var ok=document.getElementById('qmOk'),err=document.getElementById('qmErr');
  document.querySelectorAll('.rq').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();
-  document.getElementById('qmProduct').value=a.dataset.code+' — '+a.dataset.name;
-  document.getElementById('qmSubject').value='New Quote Request — '+a.dataset.code;
+  var code=a.dataset.code||'General Inquiry',name=a.dataset.name||'';
+  document.getElementById('qmProduct').value=name?code+' — '+name:code;
+  document.getElementById('qmSubject').value='New Quote Request — '+code;
   ok.style.display='none';err.style.display='none';bg.classList.add('open');});});
  function close(){bg.classList.remove('open')}
  x.addEventListener('click',close);
