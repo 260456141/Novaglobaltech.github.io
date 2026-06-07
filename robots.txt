@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://novaglobaltech.com/sitemap.xml
