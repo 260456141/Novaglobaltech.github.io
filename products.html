@@ -839,7 +839,7 @@ footer a{color:#c4d2e8}
  form.addEventListener('submit',function(e){e.preventDefault();
   var btn=form.querySelector('.send');btn.disabled=true;btn.textContent='Sending…';
   var data={};new FormData(form).forEach(function(v,k){data[k]=v});
-  fetch('https://formsubmit.co/ajax/sales@novaglobaltech.com',{method:'POST',
+  fetch('https://formsubmit.co/ajax/62e175dc012c1259695d35f2ee2828ff',{method:'POST',
    headers:{'Content-Type':'application/json','Accept':'application/json'},
    body:JSON.stringify(data)})
   .then(function(r){if(!r.ok)throw 0;return r.json()})
