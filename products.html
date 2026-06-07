@@ -95,6 +95,25 @@ footer{background:#0d1626;color:#8fa1bd;padding:34px 0;font-size:13.5px}
 footer .wrap{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center}
 footer a{color:#c4d2e8}
 @media(max-width:640px){.nav nav{display:none}}
+/* quote modal */
+.qm-bg{position:fixed;inset:0;background:rgba(13,22,38,.62);z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.qm-bg.open{display:flex}
+.qm{background:#fff;border-radius:16px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:30px 30px 26px;position:relative;box-shadow:0 28px 70px rgba(0,0,0,.35)}
+.qm h3{color:var(--navy);font-size:21px;margin-bottom:4px}
+.qm .sub{color:var(--mut);font-size:13.8px;margin-bottom:18px}
+.qm .x{position:absolute;top:14px;right:18px;font-size:26px;color:#9aa3b5;cursor:pointer;border:none;background:none;line-height:1}
+.qm .x:hover{color:var(--navy)}
+.qm label{display:block;font-size:13px;font-weight:700;color:#39435a;margin:13px 0 5px}
+.qm label .req{color:#c0392b}
+.qm input,.qm textarea,.qm select{width:100%;border:1.5px solid var(--line);border-radius:9px;padding:10px 13px;font-size:14.5px;font-family:inherit;color:var(--ink);background:#fbfcfe}
+.qm input:focus,.qm textarea:focus,.qm select:focus{outline:none;border-color:var(--accent)}
+.qm .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.qm button.send{margin-top:20px;width:100%;background:var(--navy);color:#fff;border:none;border-radius:9px;padding:13px;font-size:15.5px;font-weight:700;cursor:pointer}
+.qm button.send:hover{background:var(--accent)}
+.qm button.send:disabled{opacity:.6;cursor:wait}
+.qm .ok,.qm .err{display:none;margin-top:16px;border-radius:9px;padding:13px 16px;font-size:14.3px}
+.qm .ok{background:#e8f6ec;color:#1d6b34;border:1px solid #bfe3cb}
+.qm .err{background:#fdeeee;color:#9c2b2b;border:1px solid #f0c8c8}
 </style>
 </head>
 <body>
@@ -141,7 +160,7 @@ footer a{color:#c4d2e8}
   <ul><li>T800 high-stretch shell moves with you — no stiff, boxy feel</li><li>Down or 320g fleece liner: pick the warmth, skip the bulk</li><li>Machine-friendly fabric that resists pilling wash after wash</li></ul>
   <p class="fab"><b>Fabric:</b> T800 high-stretch shell · 90% white duck down or 320g composite fleece liner</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Mist Grey" style="background:#b9bcc1"></span><span class="dot" title="Navy" style="background:#232c45"></span><span class="n">3 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%202508">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="2508" data-name="Executive 3-in-1 System Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="8916">
@@ -153,7 +172,7 @@ footer a{color:#c4d2e8}
   <ul><li>Three compatible liner systems — buy once, wear all winter</li><li>Fully heat-sealed seams keep wind and rain out</li><li>Detachable hood, sweat-wicking and quick-venting</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester shell · fleece / 90% goose or duck down liners</p>
   <div class="sw"><span class="dot" title="Navy" style="background:#232c45"></span><span class="dot" title="Coral Red" style="background:#b65040"></span><span class="dot" title="Grey Blue" style="background:#9eb0bf"></span><span class="dot" title="Lilac" style="background:#b7b3cf"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Grey" style="background:#b6b6b6"></span><span class="dot" title="Army Grey" style="background:#6e7066"></span><span class="dot" title="Sand" style="background:#d9c06b"></span><span class="n">8 colors</span></div>
-  <div class="meta"><span class="sz">Men S–5XL · Women S–5XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%208916">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men S–5XL · Women S–5XL</span><a href="#" class="rq" data-code="8916" data-name="Multi-Weather Modular Shell">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="8866">
@@ -165,7 +184,7 @@ footer a{color:#c4d2e8}
   <ul><li>Stretch nylon shell resists abrasion on job sites and trails</li><li>Level-4 waterproof rating sheds rain and snow</li><li>High-density weave blocks wind, locks in warmth</li></ul>
   <p class="fab"><b>Fabric:</b> 87% nylon 13% spandex (75D 4-way stretch) · fleece or 90% goose/duck down liner</p>
   <div class="sw"><span class="dot" title="Ether Blue" style="background:#c2d3e3"></span><span class="dot" title="Olive" style="background:#5c6152"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Navy" style="background:#232c45"></span><span class="dot" title="Light Blue" style="background:#bdd3e8"></span><span class="dot" title="Lime Green" style="background:#a8c93d"></span><span class="n">6 colors</span></div>
-  <div class="meta"><span class="sz">Men M–5XL · Women M–5XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%208866">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men M–5XL · Women M–5XL</span><a href="#" class="rq" data-code="8866" data-name="Alpine Pro Stretch Shell">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="2503">
@@ -177,7 +196,7 @@ footer a{color:#c4d2e8}
   <ul><li>Micro-porous fabric breathes while it blocks wind</li><li>Tear- and abrasion-resistant for years of daily wear</li><li>Soft brushed interior feels broken-in from day one</li></ul>
   <p class="fab"><b>Fabric:</b> T800 cotton-touch nylon · 360g fleece liner · 90% white duck down option</p>
   <div class="sw"><span class="dot" title="Rock Grey" style="background:#b8bdb6"></span><span class="dot" title="Smoke Grey" style="background:#5a5e66"></span><span class="dot" title="Navy Blue" style="background:#283150"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">4 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%202503">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="2503" data-name="Summit-Grade Insulated Shell">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="J25592">
@@ -189,7 +208,7 @@ footer a{color:#c4d2e8}
   <ul><li>18,000mm hydrostatic rating laughs at heavy rain</li><li>Breathability rating of 7,000g keeps you dry from the inside too</li><li>Blank-canvas design made for corporate logo embroidery</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester · softshell liner · YKK zippers · Teflon 3-proof finish</p>
   <div class="sw"><span class="dot" title="Dawn Black" style="background:#23252a"></span><span class="dot" title="Cloud Grey" style="background:#c9cdd2"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="n">3 colors</span></div>
-  <div class="meta"><span class="sz">S–3XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20J25592">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–3XL · Unisex</span><a href="#" class="rq" data-code="J25592" data-name="Technical 3-in-1 Fleece Shell">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="SKY6016">
@@ -201,7 +220,7 @@ footer a{color:#c4d2e8}
   <ul><li>Every seam taped — no cold leaks, no wet shoulders</li><li>Softshell and down liners both zip into the same shell</li><li>High-stretch nylon-spandex face moves on ladders and loading docks</li></ul>
   <p class="fab"><b>Fabric:</b> 80% nylon 20% spandex shell · softshell liner standard, down liner compatible · YKK zippers</p>
   <div class="sw"><span class="dot" title="Black / Grey Panel" style="background:#3a3d42"></span><span class="dot" title="Phantom Black / Oat" style="background:#8d8675"></span><span class="dot" title="Avocado Green" style="background:#9aa86d"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Navy Blue" style="background:#283150"></span><span class="n">5 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20SKY6016">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="SKY6016" data-name="Heat-Sealed Performance Shell">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-8167">
@@ -213,7 +232,7 @@ footer a{color:#c4d2e8}
   <ul><li>Storm-level waterproof taping across the whole garment</li><li>Anti-static treatment — no clingy crackle in dry winters</li><li>Soft, quiet face fabric that holds up to daily abuse</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester shell · fleece liner or 80% duck down</p>
   <div class="sw"><span class="dot" title="Navy" style="background:#2a3554"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Caramel" style="background:#8a6a45"></span><span class="dot" title="Army Grey" style="background:#5f6258"></span><span class="dot" title="Stone" style="background:#b9b6ac"></span><span class="dot" title="Coral Pink" style="background:#dcaaa8"></span><span class="dot" title="Sky Blue" style="background:#a9cce4"></span><span class="n">7 colors</span></div>
-  <div class="meta"><span class="sz">Men M–5XL · Women M–4XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-8167">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men M–5XL · Women M–4XL</span><a href="#" class="rq" data-code="ZD-8167" data-name="All-Weather Team Jacket (Fleece or Down)">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="86208">
@@ -225,7 +244,7 @@ footer a{color:#c4d2e8}
   <ul><li>Full-garment seam sealing for hard, wet weather</li><li>90% down fill: maximum warmth per ounce</li><li>Anti-static lining stays comfortable over base layers</li></ul>
   <p class="fab"><b>Fabric:</b> 88% nylon 12% spandex · 90% white duck down</p>
   <div class="sw"><span class="dot" title="Light Grey" style="background:#c7cbcc"></span><span class="dot" title="Sage Green" style="background:#9aa794"></span><span class="dot" title="Brown" style="background:#6c4f3a"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">5 colors</span></div>
-  <div class="meta"><span class="sz">XS–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%2086208">Request a quote →</a></div>
+  <div class="meta"><span class="sz">XS–5XL · Unisex</span><a href="#" class="rq" data-code="86208" data-name="Storm-Sealed 90-Down Expedition Parka">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="985">
@@ -237,7 +256,7 @@ footer a{color:#c4d2e8}
   <ul><li>Sheds heavy rain; wipes clean of oil and grime</li><li>Tear-resistant shell survives racks, vans and warehouses</li><li>Optional fleece liner version for milder regions</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester · 90% white duck down or fleece liner</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Light Grey" style="background:#c6c9cb"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="n">3 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20985">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="985" data-name="Storm-Seal Down Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="95308">
@@ -249,7 +268,7 @@ footer a{color:#c4d2e8}
   <ul><li>Stow-away hood converts to a clean stand collar</li><li>Water-repellent nylon face blocks wind and drizzle</li><li>Chest and side zip pockets keep phone and badge secure</li></ul>
   <p class="fab"><b>Fabric:</b> 100% nylon · down insulated</p>
   <div class="sw"><span class="dot" title="Deep Coffee" style="background:#5b4636"></span><span class="dot" title="Navy Blue" style="background:#2a3554"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Sage Green" style="background:#aab3a4"></span><span class="n">4 colors</span></div>
-  <div class="meta"><span class="sz">XS–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%2095308">Request a quote →</a></div>
+  <div class="meta"><span class="sz">XS–5XL · Unisex</span><a href="#" class="rq" data-code="95308" data-name="Packable-Hood Waterproof Down Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="G2406">
@@ -261,7 +280,7 @@ footer a{color:#c4d2e8}
   <ul><li>Gender-specific patterns, not a unisex compromise</li><li>Detachable liner extends wear from fall to deep winter</li><li>Windproof face with sweat-friendly breathability</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester · detachable down liner</p>
   <div class="sw"><span class="dot" title="Navy Blue" style="background:#2a3554"></span><span class="dot" title="Sage Silver" style="background:#b6bfae"></span><span class="dot" title="Grey Green" style="background:#7e8a83"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Lilac" style="background:#c3bedb"></span><span class="dot" title="Ice Blue" style="background:#cfe0ef"></span><span class="n">6 colors</span></div>
-  <div class="meta"><span class="sz">Men M–5XL · Women M–4XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20G2406">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men M–5XL · Women M–4XL</span><a href="#" class="rq" data-code="G2406" data-name="Lightweight Down System Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-Z3008">
@@ -273,7 +292,7 @@ footer a{color:#c4d2e8}
   <ul><li>TPU lamination = dependable waterproofing</li><li>Moisture-wicking, scratch-resistant face fabric</li><li>Detachable hood for a cleaner business look</li></ul>
   <p class="fab"><b>Fabric:</b> 50D TPU-laminated shell · 90% white duck down</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">1 colors</span></div>
-  <div class="meta"><span class="sz">Men M–5XL · Women S–4XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-Z3008">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men M–5XL · Women S–4XL</span><a href="#" class="rq" data-code="ZD-Z3008" data-name="3-in-1 Down Jacket with Detachable Hood">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="6670">
@@ -285,7 +304,7 @@ footer a{color:#c4d2e8}
   <ul><li>Glued, pressure-sealed seams for cleaner lines and weather protection</li><li>90% white duck down warmth without bulk</li><li>Anti-pilling, easy-clean fabric for uniform programs</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester · 90% white duck down</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="n">2 colors</span></div>
-  <div class="meta"><span class="sz">Men 160–195 · Women 155–185 (height-based)</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%206670">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men 160–195 · Women 155–185 (height-based)</span><a href="#" class="rq" data-code="6670" data-name="Seam-Sealed Matching Down Parka">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="1010">
@@ -297,7 +316,7 @@ footer a{color:#c4d2e8}
   <ul><li>Excellent abrasion and compression resistance</li><li>Waterproof, breathable and quick to recover its loft</li><li>One-piece unisex sizing simplifies group orders</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester · 90% white duck down · optional fleece liner</p>
   <div class="sw"><span class="dot" title="Amber Yellow" style="background:#d8a13c"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">3 colors</span></div>
-  <div class="meta"><span class="sz">155–195 · Unisex (height-based)</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%201010">Request a quote →</a></div>
+  <div class="meta"><span class="sz">155–195 · Unisex (height-based)</span><a href="#" class="rq" data-code="1010" data-name="Premium Seam-Sealed Down Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="Y2502">
@@ -309,7 +328,7 @@ footer a{color:#c4d2e8}
   <ul><li>Graphene lining boosts heat retention without weight</li><li>Light, breathable and easy to care for</li><li>Clean tailored cut that works over a suit</li></ul>
   <p class="fab"><b>Fabric:</b> 85% nylon 15% spandex · 90% white duck down · graphene back lining</p>
   <div class="sw"><span class="dot" title="Deep Navy" style="background:#252e49"></span><span class="n">1 colors</span></div>
-  <div class="meta"><span class="sz">Men 165–195 · Women 155–185 (height-based)</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20Y2502">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men 165–195 · Women 155–185 (height-based)</span><a href="#" class="rq" data-code="Y2502" data-name="Graphene-Lined Business Down Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-2306">
@@ -321,7 +340,7 @@ footer a{color:#c4d2e8}
   <ul><li>Wrinkle-resistant oxford keeps its composure</li><li>Smooth, durable, windproof and warm</li><li>Soft hand feel that reads premium up close</li></ul>
   <p class="fab"><b>Fabric:</b> Oxford fabric · 90% premium white duck down</p>
   <div class="sw"><span class="dot" title="Navy" style="background:#2a3554"></span><span class="dot" title="Khaki" style="background:#cbb592"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Army Green" style="background:#4f5742"></span><span class="dot" title="Pink" style="background:#e3bdbd"></span><span class="dot" title="Light Blue" style="background:#b7d2e8"></span><span class="n">6 colors</span></div>
-  <div class="meta"><span class="sz">Men M–5XL · Women M–4XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-2306">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men M–5XL · Women M–4XL</span><a href="#" class="rq" data-code="ZD-2306" data-name="Graphene Oxford Business Down Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="9202">
@@ -333,7 +352,7 @@ footer a{color:#c4d2e8}
   <ul><li>Mid-thigh length keeps the suit (and the seat) warm</li><li>Oil- and stain-repellent face wipes clean</li><li>Graphene lining redefines traditional warmth</li></ul>
   <p class="fab"><b>Fabric:</b> 85% nylon 15% spandex · 90% white goose down · graphene lining</p>
   <div class="sw"><span class="dot" title="Deep Navy" style="background:#252e49"></span><span class="n">1 colors</span></div>
-  <div class="meta"><span class="sz">Men 165–195 · Women 155–185 (height-based)</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%209202">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men 165–195 · Women 155–185 (height-based)</span><a href="#" class="rq" data-code="9202" data-name="Graphene Mid-Length Business Down Coat">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-22888">
@@ -345,7 +364,7 @@ footer a{color:#c4d2e8}
   <ul><li>Full-seam taping shown in the details, felt in the warmth</li><li>Breathes well — warm without the sauna effect</li><li>YKK zippers and metal hardware throughout</li></ul>
   <p class="fab"><b>Fabric:</b> 87% nylon 13% spandex · composite swan-down insulation</p>
   <div class="sw"><span class="dot" title="Navy" style="background:#2a3554"></span><span class="dot" title="Khaki" style="background:#cbb592"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">3 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-22888">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="ZD-22888" data-name="Executive Composite-Down Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-2318">
@@ -357,7 +376,7 @@ footer a{color:#c4d2e8}
   <ul><li>Adjustable, removable hood with shapeable brim</li><li>Seamless heat-bonded chest pocket</li><li>XS–4XL unisex run covers the whole roster</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester shell · coral fleece liner · YKK resin zippers</p>
   <div class="sw"><span class="dot" title="Wine Red" style="background:#7d3038"></span><span class="dot" title="Khaki" style="background:#d6c6a2"></span><span class="dot" title="Navy" style="background:#2a3554"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">4 colors</span></div>
-  <div class="meta"><span class="sz">XS–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-2318">Request a quote →</a></div>
+  <div class="meta"><span class="sz">XS–4XL · Unisex</span><a href="#" class="rq" data-code="ZD-2318" data-name="Ultra-Soft Lined Jacket, Full Heat-Seal">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-Y9012">
@@ -369,7 +388,7 @@ footer a{color:#c4d2e8}
   <ul><li>Teflon finish repels water, oil and coffee spills</li><li>Adjustable drawcord hood, metal snap cuffs</li><li>His &amp; hers colorways for team consistency</li></ul>
   <p class="fab"><b>Fabric:</b> DuPont Teflon-treated shell · 90% white goose down</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="n">2 colors</span></div>
-  <div class="meta"><span class="sz">Men S–4XL · Women S–4XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-Y9012">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men S–4XL · Women S–4XL</span><a href="#" class="rq" data-code="ZD-Y9012" data-name="Business Shell with Full YKK Zips">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-Y2167">
@@ -381,7 +400,7 @@ footer a{color:#c4d2e8}
   <ul><li>Removable liner adapts to shoulder seasons</li><li>Metal zippers and snap cuffs that last</li><li>Inner zip pocket for wallet and passport</li></ul>
   <p class="fab"><b>Fabric:</b> 85% nylon 15% spandex · 90% white goose down</p>
   <div class="sw"><span class="dot" title="Navy Blue" style="background:#252e49"></span><span class="n">1 colors</span></div>
-  <div class="meta"><span class="sz">Men S–4XL · Women S–4XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-Y2167">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men S–4XL · Women S–4XL</span><a href="#" class="rq" data-code="ZD-Y2167" data-name="Detachable-Liner Business Down Coat">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-Y2601">
@@ -393,7 +412,7 @@ footer a{color:#c4d2e8}
   <ul><li>Water, oil and stain resistant Teflon finish</li><li>Adjustable hood, metal two-way hardware</li><li>Inner zip pocket keeps essentials close</li></ul>
   <p class="fab"><b>Fabric:</b> DuPont 3-proof Teflon fabric · 90% white goose down</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">1 colors</span></div>
-  <div class="meta"><span class="sz">Men S–4XL · Women S–4XL</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-Y2601">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men S–4XL · Women S–4XL</span><a href="#" class="rq" data-code="ZD-Y2601" data-name="Mid-Length Casual Down Coat">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-Z6002">
@@ -405,7 +424,7 @@ footer a{color:#c4d2e8}
   <ul><li>YKK two-way zipper for easy sitting and driving</li><li>Hook-and-loop stretch cuffs seal out wind</li><li>Twill shell wears formal, performs casual</li></ul>
   <p class="fab"><b>Fabric:</b> Twill polyester shell · 90% white duck down</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">1 colors</span></div>
-  <div class="meta"><span class="sz">Men 160–195 · Women 155–185 (height-based)</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-Z6002">Request a quote →</a></div>
+  <div class="meta"><span class="sz">Men 160–195 · Women 155–185 (height-based)</span><a href="#" class="rq" data-code="ZD-Z6002" data-name="Business Mid-Length Down Coat">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-809">
@@ -417,7 +436,7 @@ footer a{color:#c4d2e8}
   <ul><li>4-way stretch fabric for all-day movement</li><li>Underarm ventilation dumps heat fast</li><li>Ribbed cuffs and mesh lining for comfort</li></ul>
   <p class="fab"><b>Fabric:</b> 4-way stretch softshell · waterproof zippers</p>
   <div class="sw"><span class="dot" title="Navy" style="background:#2a3554"></span><span class="dot" title="Army Green" style="background:#4f5742"></span><span class="dot" title="Dark Khaki" style="background:#a08b62"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Red" style="background:#b3232d"></span><span class="dot" title="Ivory" style="background:#ece8df"></span><span class="dot" title="Mint" style="background:#bfe0d2"></span><span class="n">7 colors</span></div>
-  <div class="meta"><span class="sz">M–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-809">Request a quote →</a></div>
+  <div class="meta"><span class="sz">M–4XL · Unisex</span><a href="#" class="rq" data-code="ZD-809" data-name="Stand-Collar Softshell Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="ZD-J66">
@@ -429,7 +448,7 @@ footer a{color:#c4d2e8}
   <ul><li>Holds a sharp silhouette through daily wear</li><li>Comfort-first fabric, durable construction</li><li>Three conservative colors for uniform programs</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester</p>
   <div class="sw"><span class="dot" title="Denim Blue" style="background:#5e6f86"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="n">3 colors</span></div>
-  <div class="meta"><span class="sz">M–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20ZD-J66">Request a quote →</a></div>
+  <div class="meta"><span class="sz">M–4XL · Unisex</span><a href="#" class="rq" data-code="ZD-J66" data-name="Stand-Collar Business Jacket">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M8">
@@ -441,7 +460,7 @@ footer a{color:#c4d2e8}
   <ul><li>Waterproof-breathable 3-layer construction</li><li>YKK zips, scratch-resistant face</li><li>Versatile cut pairs with chinos or uniform pants</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester 3-layer composite · YKK zipper</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Mist Grey" style="background:#c3c6ca"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="n">3 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M8">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M8" data-name="3-Layer Commuter Jacket">Request a quote →</a></div>
  </div>
 </article>
  </div>
@@ -464,7 +483,7 @@ footer a{color:#c4d2e8}
   <ul><li>Taped collar keeps its shape wash after wash</li><li>Skin-friendly, breathable cotton-lyocell hand feel</li><li>Colorfast through repeated industrial laundering</li></ul>
   <p class="fab"><b>Fabric:</b> 65.8% cotton · 23.6% polyester · 10.6% lyocell (200gsm, 80s)</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Lotus Pink" style="background:#e7c6cc"></span><span class="dot" title="Light Grey" style="background:#cfd1d2"></span><span class="dot" title="Pale Green" style="background:#cdd6c1"></span><span class="dot" title="Pine Green" style="background:#8a9b6e"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">7 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20HL8">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="HL8" data-name="Lyocell-Blend Taped Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M78">
@@ -476,7 +495,7 @@ footer a{color:#c4d2e8}
   <ul><li>Cool-to-the-touch finish for hot warehouses and patios</li><li>Antibacterial &amp; anti-dust-mite treatment fights odor</li><li>Holds color and shape; resists stretching at the collar</li></ul>
   <p class="fab"><b>Fabric:</b> 75% long-staple cotton · 25% polyester (210gsm, 70s)</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Ocean Blue" style="background:#b9d4ea"></span><span class="dot" title="Seafoam" style="background:#cfe0d5"></span><span class="dot" title="Pink" style="background:#ecc6cb"></span><span class="dot" title="Beige" style="background:#e4ddcf"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Army Green" style="background:#b3b08a"></span><span class="n">8 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M78">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M78" data-name="Cool-Touch Antibacterial Cotton Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M56">
@@ -488,7 +507,7 @@ footer a{color:#c4d2e8}
   <ul><li>Buttery modal hand feel with real stretch</li><li>Wicks sweat; resists wrinkles and creases</li><li>Slimming drape without cling</li></ul>
   <p class="fab"><b>Fabric:</b> 56.1% cotton · 22.7% modal · 16.8% polyester · 4.4% spandex (200gsm, 50s)</p>
   <div class="sw"><span class="dot" title="Navy Blue" style="background:#3a4a68"></span><span class="dot" title="Silver Grey" style="background:#c2bfb8"></span><span class="dot" title="Ocean Blue" style="background:#bdd5e8"></span><span class="dot" title="Flame Orange" style="background:#cd6a3e"></span><span class="dot" title="Tea Brown" style="background:#6d5a4c"></span><span class="dot" title="Night Blue" style="background:#7a93b3"></span><span class="dot" title="Slate" style="background:#2f3b4e"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Sage" style="background:#cfe0d5"></span><span class="n">10 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M56">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M56" data-name="Premium Modal-Blend Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="YP5901">
@@ -500,7 +519,7 @@ footer a{color:#c4d2e8}
   <ul><li>7A antibacterial rating: serious odor control</li><li>Ice-cotton cooling for courts, courses and curbside</li><li>High-count modal cotton survives commercial washing</li></ul>
   <p class="fab"><b>Fabric:</b> 33% cotton · 33% modal · 25% polyester · 9% spandex (200gsm, 70s)</p>
   <div class="sw"><span class="dot" title="Light Blue" style="background:#b9d2e8"></span><span class="dot" title="Pale Grey-Green" style="background:#d3ded2"></span><span class="dot" title="Silver Grey" style="background:#d4d4d2"></span><span class="dot" title="Off-White" style="background:#f1efe9"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Deep Blue" style="background:#283150"></span><span class="dot" title="Amber Orange" style="background:#d2913c"></span><span class="dot" title="Morandi Pink" style="background:#e0b9bc"></span><span class="n">8 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20YP5901">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="YP5901" data-name="7A Antibacterial Ice-Cotton Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M88">
@@ -512,7 +531,7 @@ footer a{color:#c4d2e8}
   <ul><li>Smooth, glossy hand feel that reads premium</li><li>Breathes and wicks; superb drape</li><li>7A antibacterial finish keeps it fresh</li></ul>
   <p class="fab"><b>Fabric:</b> 88.7% cotton · 11.3% spandex (200gsm, 80s)</p>
   <div class="sw"><span class="dot" title="Deep Grey" style="background:#5b5e63"></span><span class="dot" title="Navy" style="background:#2c3955"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Sunset Orange" style="background:#c2643c"></span><span class="dot" title="Grey Purple" style="background:#cbb9c2"></span><span class="dot" title="Grey Blue" style="background:#c3ccd4"></span><span class="dot" title="Beige Grey" style="background:#ddd5c4"></span><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Seafoam" style="background:#cfe0d5"></span><span class="n">9 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M88">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M88" data-name="7A Antibacterial Long-Staple Cotton Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="9888">
@@ -524,7 +543,7 @@ footer a{color:#c4d2e8}
   <ul><li>Crisp piqué texture hides wear and wrinkles</li><li>Cool, dry and non-clinging in humid heat</li><li>Slim, structured fit without restriction</li></ul>
   <p class="fab"><b>Fabric:</b> 86% cotton · 9% nylon · 5% spandex</p>
   <div class="sw"><span class="dot" title="Smoke Green" style="background:#c5cfc0"></span><span class="dot" title="Dark Navy" style="background:#252e49"></span><span class="dot" title="Army Green" style="background:#56603f"></span><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Deep Grey" style="background:#4d4f4b"></span><span class="dot" title="Lotus Pink" style="background:#dfb6bd"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">7 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%209888">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="9888" data-name="Cotton-Nylon Piqué Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="22006">
@@ -536,7 +555,7 @@ footer a{color:#c4d2e8}
   <ul><li>Silky luster that holds after laundering</li><li>Structured two-tier collar frames the neckline</li><li>Ten colorways for department coding</li></ul>
   <p class="fab"><b>Fabric:</b> 95% mercerized cotton · 5% spandex</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Purple" style="background:#5e3f8f"></span><span class="dot" title="Haze Blue" style="background:#4f7da6"></span><span class="dot" title="Emerald" style="background:#1f5c47"></span><span class="dot" title="Navy" style="background:#252e49"></span><span class="dot" title="Heather Grey" style="background:#c9c9c9"></span><span class="dot" title="Pink" style="background:#e3a8b2"></span><span class="dot" title="Sky Blue" style="background:#7fb3e0"></span><span class="dot" title="Pea Green" style="background:#9ec79b"></span><span class="dot" title="White" style="background:#f4f4f2"></span><span class="n">10 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%2022006">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="22006" data-name="50s Mercerized Silk-Touch Piqué Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="S903">
@@ -548,7 +567,7 @@ footer a{color:#c4d2e8}
   <ul><li>Seamless comfort: no rub points, no ridges</li><li>Cooling hand feel; never stuffy or clingy</li><li>Keeps its silhouette through long-haul days</li></ul>
   <p class="fab"><b>Fabric:</b> 59.5% cotton · 32.1% polyester · 8.4% spandex (50s)</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Lotus Pink" style="background:#ecd2d4"></span><span class="dot" title="Army Green" style="background:#7a8a66"></span><span class="dot" title="Ice Blue" style="background:#cfe2ef"></span><span class="dot" title="Slate Grey" style="background:#5d6670"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">7 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20S903">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="S903" data-name="Seamless Light-Luxury Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="S902">
@@ -560,7 +579,7 @@ footer a{color:#c4d2e8}
   <ul><li>Featherweight 100D double-knit polyester</li><li>Wicks and dries at athletic speed</li><li>High-factor UV protection for outdoor crews</li></ul>
   <p class="fab"><b>Fabric:</b> 170gsm 100% polyester (100D double-knit) · ultrasonic seamless</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Apricot Grey" style="background:#ddd6c8"></span><span class="dot" title="Modern Grey" style="background:#aeb2b5"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Mountain Blue" style="background:#7fb6c1"></span><span class="dot" title="Deep Blue" style="background:#2b4f86"></span><span class="dot" title="Mint" style="background:#bfe3d2"></span><span class="dot" title="Sunset Orange" style="background:#cd7a44"></span><span class="n">8 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20S902">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="S902" data-name="Ultra-Light Quick-Dry UV Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="2311">
@@ -572,7 +591,7 @@ footer a{color:#c4d2e8}
   <ul><li>4.6% real silk for drape and depth of color</li><li>Tencel breathability with a refined matte finish</li><li>Reads quiet luxury, not loud logo</li></ul>
   <p class="fab"><b>Fabric:</b> 23.4% cotton · 27.3% lyocell (Tencel) · 44.7% polyester · 4.6% silk</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Grey Blue" style="background:#7fa3c4"></span><span class="dot" title="Pink" style="background:#dba2ac"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Gentleman Grey" style="background:#75727b"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="dot" title="Pea Green" style="background:#9ec7a4"></span><span class="n">7 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%202311">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="2311" data-name="Tencel + Real Silk Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="229805">
@@ -584,7 +603,7 @@ footer a{color:#c4d2e8}
   <ul><li>No-shrink, no-iron, easy-care finish</li><li>Dense 50s double yarn resists pilling</li><li>Substantial weight that drapes clean</li></ul>
   <p class="fab"><b>Fabric:</b> 230gsm · 50s double-ply · 100% combed cotton</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Grey" style="background:#b8babc"></span><span class="dot" title="Red" style="background:#b3232d"></span><span class="dot" title="Navy Blue" style="background:#283150"></span><span class="n">5 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20229805">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="229805" data-name="Heavyweight Nano-Treated Cotton Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M26">
@@ -596,7 +615,7 @@ footer a{color:#c4d2e8}
   <ul><li>Liquid-ammonia finish = lasting silk-touch</li><li>Double-faced knit hangs beautifully</li><li>Resists wrinkles, pilling and bagging</li></ul>
   <p class="fab"><b>Fabric:</b> 210gsm · 60s 3-ply liquid-ammonia mercerized · 100% cotton</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Burgundy" style="background:#722f37"></span><span class="dot" title="Mineral Grey" style="background:#5d6064"></span><span class="dot" title="Navy" style="background:#2c3955"></span><span class="n">5 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M26">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M26" data-name="Liquid-Ammonia Mercerized Double-Knit Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M25">
@@ -608,7 +627,7 @@ footer a{color:#c4d2e8}
   <ul><li>Subtle contrast tipping sharpens the look</li><li>Smooth, cool mercerized hand feel</li><li>Excellent drape with zero cling</li></ul>
   <p class="fab"><b>Fabric:</b> 210gsm · 60s 3-ply liquid-ammonia mercerized · 100% cotton</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Burgundy" style="background:#722f37"></span><span class="dot" title="Grey" style="background:#7c7f83"></span><span class="dot" title="Navy" style="background:#2c3955"></span><span class="n">5 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M25">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M25" data-name="Mercerized Polo with Contrast Tipping">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M23">
@@ -620,7 +639,7 @@ footer a{color:#c4d2e8}
   <ul><li>Bright, lasting luster; easy to maintain</li><li>Strong wicking and breathability</li><li>Resists deformation and pilling</li></ul>
   <p class="fab"><b>Fabric:</b> 200gsm 60s · 64.2% cotton · 30.9% polyester · 4.9% spandex</p>
   <div class="sw"><span class="dot" title="Navy" style="background:#2c3955"></span><span class="dot" title="Lavender" style="background:#c9b5dd"></span><span class="dot" title="Cream" style="background:#efe9d8"></span><span class="dot" title="Executive Grey" style="background:#8d9094"></span><span class="dot" title="Burgundy" style="background:#722f37"></span><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">7 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M23">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M23" data-name="Liquid-Ammonia Silky Cotton Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="M22">
@@ -632,7 +651,7 @@ footer a{color:#c4d2e8}
   <ul><li>Cool-touch comfort in a thin, soft knit</li><li>Strong antibacterial performance</li><li>Ten colors from glacier blue to crimson</li></ul>
   <p class="fab"><b>Fabric:</b> 200gsm 60s · 64.2% cotton · 30.9% polyester · 4.9% spandex</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Aqua" style="background:#a8ddd2"></span><span class="dot" title="Lavender" style="background:#cbb7de"></span><span class="dot" title="Cream" style="background:#efe9d8"></span><span class="dot" title="Navy" style="background:#2c3955"></span><span class="dot" title="Glacier Blue" style="background:#a6c8e8"></span><span class="dot" title="Crimson" style="background:#b35044"></span><span class="dot" title="Executive Grey" style="background:#84878b"></span><span class="dot" title="Burgundy" style="background:#722f37"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">10 colors</span></div>
-  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20M22">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–4XL · Unisex</span><a href="#" class="rq" data-code="M22" data-name="Silky Cotton Polo — 10 Colors">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="YP6601">
@@ -644,7 +663,7 @@ footer a{color:#c4d2e8}
   <ul><li>Ultrasonic bonding for clean, durable seams</li><li>7A antibacterial, anti-mite, anti-wrinkle</li><li>Locked-in color through industrial washing</li></ul>
   <p class="fab"><b>Fabric:</b> 210gsm · 87% cotton · 8% nylon · 5% spandex</p>
   <div class="sw"><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Deep Blue" style="background:#252e49"></span><span class="dot" title="Deep Grey" style="background:#54575c"></span><span class="dot" title="Army Green" style="background:#56603f"></span><span class="dot" title="Walnut Brown" style="background:#5c4a3d"></span><span class="dot" title="Chinese Red" style="background:#b3232d"></span><span class="dot" title="Lotus Pink" style="background:#e3bcc2"></span><span class="dot" title="Smoke Green" style="background:#cdd6c8"></span><span class="dot" title="Light Grey" style="background:#cfd1d2"></span><span class="dot" title="Aurora White" style="background:#f2f1ed"></span><span class="n">10 colors</span></div>
-  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20YP6601">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="#" class="rq" data-code="YP6601" data-name="Mesh-Base Mini-Jacquard Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="YP2801">
@@ -656,7 +675,7 @@ footer a{color:#c4d2e8}
   <ul><li>Cooling + UV protection for outdoor hours</li><li>Slick, snag-resistant jacquard face</li><li>7A antibacterial and anti-mite finish</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester dot jacquard</p>
   <div class="sw"><span class="dot" title="Apricot Grey" style="background:#ddd9cd"></span><span class="dot" title="Mist Blue" style="background:#9fc0d8"></span><span class="dot" title="Porcelain Grey" style="background:#b9bcbe"></span><span class="dot" title="Slate Blue" style="background:#3e4d63"></span><span class="dot" title="Ink Green" style="background:#4d5a50"></span><span class="dot" title="Shadow Black" style="background:#26282c"></span><span class="n">6 colors</span></div>
-  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20YP2801">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="#" class="rq" data-code="YP2801" data-name="Quick-Dry Dot-Jacquard Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="YP2802">
@@ -668,7 +687,7 @@ footer a{color:#c4d2e8}
   <ul><li>Moisture-wicking quick-dry technology</li><li>Persistent stretch and shape retention</li><li>Stain-resistant, easy-iron face</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester dot jacquard</p>
   <div class="sw"><span class="dot" title="Apricot Grey" style="background:#ddd9cd"></span><span class="dot" title="Mist Blue" style="background:#9fc0d8"></span><span class="dot" title="Porcelain Grey" style="background:#b9bcbe"></span><span class="dot" title="Ink Green" style="background:#4d5a50"></span><span class="dot" title="Slate Blue" style="background:#3e4d63"></span><span class="dot" title="Shadow Black" style="background:#26282c"></span><span class="n">6 colors</span></div>
-  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20YP2802">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="#" class="rq" data-code="YP2802" data-name="Quick-Dry Dot-Jacquard Polo II">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="YP6603">
@@ -680,7 +699,7 @@ footer a{color:#c4d2e8}
   <ul><li>Premium long-staple cotton: softer, stronger</li><li>7A antibacterial and dust-mite protection</li><li>Locked color that resists fading</li></ul>
   <p class="fab"><b>Fabric:</b> 87% cotton · 8% nylon · 5% spandex</p>
   <div class="sw"><span class="dot" title="Smoke Green" style="background:#cdd6c8"></span><span class="dot" title="Lotus Pink" style="background:#e3bcc2"></span><span class="dot" title="Aurora White" style="background:#f2f1ed"></span><span class="dot" title="Light Grey" style="background:#cfd1d2"></span><span class="dot" title="Army Green" style="background:#56603f"></span><span class="dot" title="Deep Grey" style="background:#54575c"></span><span class="dot" title="Deep Blue" style="background:#252e49"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">8 colors</span></div>
-  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20YP6603">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="#" class="rq" data-code="YP6603" data-name="Xinjiang Long-Staple Cotton Mesh Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="YP2601">
@@ -692,7 +711,7 @@ footer a{color:#c4d2e8}
   <ul><li>Cooling quick-dry polyester knit</li><li>Anti-mite, antibacterial treatment</li><li>Holds its collar and cuffs all season</li></ul>
   <p class="fab"><b>Fabric:</b> 100% polyester</p>
   <div class="sw"><span class="dot" title="Cream White" style="background:#efece2"></span><span class="dot" title="Army Green" style="background:#6b7752"></span><span class="dot" title="Light Blue" style="background:#b7d2e8"></span><span class="dot" title="Mid Grey" style="background:#9a9da1"></span><span class="dot" title="Deep Blue" style="background:#252e49"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">6 colors</span></div>
-  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20YP2601">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="#" class="rq" data-code="YP2601" data-name="Cool Sun-Protection Quick-Dry Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="YP7106">
@@ -704,7 +723,7 @@ footer a{color:#c4d2e8}
   <ul><li>20% natural lyocell for silky coolness</li><li>Skin-friendly, easy-care face</li><li>7A antibacterial and anti-mite finish</li></ul>
   <p class="fab"><b>Fabric:</b> 47% mercerized cotton · 33% polyester · 20% lyocell</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Pine Green" style="background:#aabf9a"></span><span class="dot" title="Denim Blue" style="background:#7da3c4"></span><span class="dot" title="Malt Yellow" style="background:#dde3a8"></span><span class="dot" title="Cloud Grey" style="background:#c8c8c4"></span><span class="dot" title="Navy" style="background:#283150"></span><span class="dot" title="Deep Grey" style="background:#4f535a"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">8 colors</span></div>
-  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%20YP7106">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–5XL · Unisex</span><a href="#" class="rq" data-code="YP7106" data-name="Double-Faced Lyocell Piqué Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="6803">
@@ -716,7 +735,7 @@ footer a{color:#c4d2e8}
   <ul><li>60s Lenzing modal: cool, fluid, breathable</li><li>Seamless hem hangs sharp untucked</li><li>Extended sizing to 6XL</li></ul>
   <p class="fab"><b>Fabric:</b> 49.7% modal · 43.6% polyester (Sorona) · 6.7% spandex (200gsm, 60s)</p>
   <div class="sw"><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Blue" style="background:#4a7cab"></span><span class="dot" title="Grey Green" style="background:#a9cbd3"></span><span class="dot" title="Deep Blue" style="background:#252e49"></span><span class="dot" title="Iron Grey" style="background:#797d82"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="dot" title="Amber Orange" style="background:#c45f33"></span><span class="dot" title="Grass Green" style="background:#6f9a4d"></span><span class="n">8 colors</span></div>
-  <div class="meta"><span class="sz">S–6XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%206803">Request a quote →</a></div>
+  <div class="meta"><span class="sz">S–6XL · Unisex</span><a href="#" class="rq" data-code="6803" data-name="Modal + Sorona Contrast-Collar Polo">Request a quote →</a></div>
  </div>
 </article>
 <article class="card" id="8331">
@@ -728,7 +747,7 @@ footer a{color:#c4d2e8}
   <ul><li>Bonded seams: zero stitch lines, zero chafe</li><li>Instant cool-touch; sustained cooling effect</li><li>UV-reflective texture lowers heat absorption</li></ul>
   <p class="fab"><b>Fabric:</b> 75% nylon · 25% spandex</p>
   <div class="sw"><span class="dot" title="Glacier Blue" style="background:#cfe3df"></span><span class="dot" title="Pink Orange" style="background:#e8c4b8"></span><span class="dot" title="White" style="background:#f4f4f2"></span><span class="dot" title="Army Green" style="background:#717a5c"></span><span class="dot" title="Black" style="background:#1d1f23"></span><span class="n">5 colors</span></div>
-  <div class="meta"><span class="sz">M–5XL · Unisex</span><a href="mailto:sales@novaglobaltech.com?subject=Quote%20Request%20—%208331">Request a quote →</a></div>
+  <div class="meta"><span class="sz">M–5XL · Unisex</span><a href="#" class="rq" data-code="8331" data-name="Ice-Silk Camo-Texture Performance Polo">Request a quote →</a></div>
  </div>
 </article>
  </div>
@@ -776,5 +795,60 @@ footer a{color:#c4d2e8}
  <span>HK: Flat 9, 10/F, Goldfield Industrial Centre, 1 Sui Wo Road, Fo Tan, Sha Tin, N.T., Hong Kong</span>
  <a href="mailto:sales@novaglobaltech.com">sales@novaglobaltech.com</a>
 </div></footer>
+
+<div class="qm-bg" id="qmBg" role="dialog" aria-modal="true">
+ <div class="qm">
+  <button class="x" id="qmX" aria-label="Close">×</button>
+  <h3>Request a Quote</h3>
+  <p class="sub">Tell us what you need — we reply within one business day with factory-direct pricing.</p>
+  <form id="qmForm">
+   <input type="hidden" name="_subject" id="qmSubject" value="New Quote Request">
+   <input type="hidden" name="_template" value="table">
+   <input type="hidden" name="_captcha" value="false">
+   <input type="text" name="_honey" style="display:none">
+   <label>Product Style <span class="req">*</span></label>
+   <input type="text" name="product" id="qmProduct" required>
+   <div class="row">
+    <div><label>Your Name <span class="req">*</span></label><input type="text" name="name" required placeholder="John Smith"></div>
+    <div><label>Company</label><input type="text" name="company" placeholder="Acme Inc."></div>
+   </div>
+   <div class="row">
+    <div><label>Email <span class="req">*</span></label><input type="email" name="email" required placeholder="you@company.com"></div>
+    <div><label>Estimated Quantity</label><input type="text" name="quantity" placeholder="e.g. 50 pcs"></div>
+   </div>
+   <label>Message — colors, sizes, logo needs…</label>
+   <textarea name="message" rows="4" placeholder="We need 50 navy jackets with embroidered logo, mixed sizes M–3XL…"></textarea>
+   <button class="send" type="submit">Send Quote Request</button>
+   <div class="ok" id="qmOk">✅ Thank you! Your request has been sent — we'll get back to you within one business day.</div>
+   <div class="err" id="qmErr">Something went wrong. Please email us directly at <a href="mailto:sales@novaglobaltech.com">sales@novaglobaltech.com</a>.</div>
+  </form>
+ </div>
+</div>
+<script>
+(function(){
+ var bg=document.getElementById('qmBg'),x=document.getElementById('qmX'),form=document.getElementById('qmForm');
+ var ok=document.getElementById('qmOk'),err=document.getElementById('qmErr');
+ document.querySelectorAll('.rq').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();
+  document.getElementById('qmProduct').value=a.dataset.code+' — '+a.dataset.name;
+  document.getElementById('qmSubject').value='New Quote Request — '+a.dataset.code;
+  ok.style.display='none';err.style.display='none';bg.classList.add('open');});});
+ function close(){bg.classList.remove('open')}
+ x.addEventListener('click',close);
+ bg.addEventListener('click',function(e){if(e.target===bg)close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+ form.addEventListener('submit',function(e){e.preventDefault();
+  var btn=form.querySelector('.send');btn.disabled=true;btn.textContent='Sending…';
+  var data={};new FormData(form).forEach(function(v,k){data[k]=v});
+  fetch('https://formsubmit.co/ajax/sales@novaglobaltech.com',{method:'POST',
+   headers:{'Content-Type':'application/json','Accept':'application/json'},
+   body:JSON.stringify(data)})
+  .then(function(r){if(!r.ok)throw 0;return r.json()})
+  .then(function(){ok.style.display='block';err.style.display='none';form.querySelectorAll('input:not([type=hidden]),textarea').forEach(function(i){i.value=''});})
+  .catch(function(){err.style.display='block'})
+  .finally(function(){btn.disabled=false;btn.textContent='Send Quote Request'});
+ });
+})();
+</script>
+
 </body>
 </html>
